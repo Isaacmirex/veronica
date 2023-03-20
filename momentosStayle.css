@@ -1,0 +1,161 @@
+header {
+    background-color: black;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  nav {
+    background-color: black;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    flex-grow: 1;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  nav a button#stopButton {
+    background-color: #633434;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-image: url('silencio.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+  
+  nav a:hover {
+    color: #F4A460;
+    transform: translateY(-5px);
+  }
+  
+  nav a:nth-child(1) {
+    background-color: #FFC0CB;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  
+  nav a:nth-child(2) {
+    background-color: #B0E0E6;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  
+  nav a:nth-child(3) {
+    background-color: #F4A460;
+    border-radius: 5px;
+  }
+  
+  body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.xd {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    animation: show 5s linear infinite;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.square {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: relative;
+}
+
+.square h2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #00e6e6, 0 0 60px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6;
+}
+
+.square img, .square video {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 5px solid #00e6e6;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.square video {
+  width: 300px;
+  height: 300px;
+}
+
+.neon {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #00e6e6, 0 0 60px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6;
+}
+
+.neon:hover {
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6, 0 0 50px #00e6e6;
+  }
+}

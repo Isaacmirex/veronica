@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation: shooting 2s linear infinite;
+}
+
+header {
+    background-color: black;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+    background-color: black;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    flex-grow: 1;
+    text-align: center;
+    padding: 1rem;   
+    width: 100%;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav a button#stopButton {
+    background-color: #633434;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-image: url('silencio.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+nav a:hover {
+    color: #F4A460;
+    transform: translateY(-5px);
+}
+
+nav a:nth-child(1) {
+    background-color: #FFC0CB;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+nav a:nth-child(2) {
+    background-color: #B0E0E6;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+nav a:nth-child(3) {
+    background-color: #F4A460;
+    border-radius: 5px;
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    scroll-margin-top: 100px;
+    position: relative;
+}
+
+section h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    animation: changeColor 5s ease-in-out infinite alternate;
+}
+
+@keyframes changeColor {
+    0% {
+        color: #F4A460; /* Beige */
+    }
+    25% {
+        color: #FFC0CB; /* Rosado */
+    }
+    50% {
+        color: #B0E0E6; /* Celeste */
+    }
+    75% {
+        color: #F4A460; /* Beige */
+    }
+    100% {
+        color: #DC143C; /* Rojo */
+    }
+}
+
+section h3 {
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+
+footer {
+    background-color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    color: #FFF;
+    position: relative;
+}
+
+.drop {
+    position: absolute;
+    background-color: #57190e;
+    border-radius: 50%;
+    animation: dropAnimation 10s linear infinite;
+    opacity: 1;
+}
+
+@keyframes shooting {
+    0% {
+        transform: translateX(0%) translateY(0%);
+        background-color: transparent;
+    }
+    5% {
+        background-color: #f2a1a8;
+        box-shadow: 0 0 50px 5px #f2a1a8;
+    }
+    10% {
+        background-color: #d66e75;
+        box-shadow: 0 0 50px 5px #d66e75;
+    }
+    15% {
+        background-color: #c82e47;
+        box-shadow: 0 0 50px 5px #c82e47;
+    }
+    20% {
+        background-color: #910030;
+        box-shadow: 0 0 50px 5px #910030;
+    }
+    25% {
+        background-color: #57190e;
+        box-shadow: 0 0 50px 5px #57190e;
+    }
+    100% {
+        transform: translateX(1000%) translateY(1000%);
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+p {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.471);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.textfooter {
+    background-color: rgba(0, 0, 0, 0.603);
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.star {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation: shooting 2s linear infinite;
+}
+
+.star:nth-child(4n+1) {
+    background-color: #FFC0CB; /* Rosado */
+}
+
+.star:nth-child(4n+2) {
+    background-color: #B0E0E6; /* Celeste */
+}
+
+.star:nth-child(4n+3) {
+    background-color: #F4A460; /* Beige */
+}
+
+.star:nth-child(4n+4) {
+    background-color: #DC143C; /* Rojo */
+}
+
